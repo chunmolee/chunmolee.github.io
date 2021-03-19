@@ -1,0 +1,29 @@
+name: github pages # workflow名稱
+
+on:
+  push: # 當push時觸發作業
+    branches: # 以分支作業
+      - main  # 分支名(自訂)
+
+jobs:
+  deploy: # 工作名稱(自訂)
+    runs-on: ubuntu-latest # 執行環境
+    steps:
+      - uses: actions/checkout@v2 # 官方action
+        with:
+          submodules: true  # theme是用submodules加入，所以要開啟
+
+      - name: Setup Hugo # Hugo建置
+        uses: peaceiris/actions-hugo@v2 # Hugo建議action
+        with:
+          hugo-version: 'latest' # Hugo版本
+          extended: true # 是否為extended版本
+
+      - name: Build # 執行指令
+        run: hugo --minify --gc
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
