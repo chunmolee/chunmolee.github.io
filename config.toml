@@ -1,0 +1,189 @@
+# 基本變數
+baseurl      = "https://chunmolee.github.io"  # 網址
+title        = "Andy's Blog"
+theme        = "hello-friend-ng"
+languageCode = "zh-TW"  # html之lang屬性
+defaultContentLanguage = "zh-tw"  # i18n語言模板
+keywords = ""
+readOtherPosts = "Read other posts"
+copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>' # This message is only used by the RSS template.
+
+# 本機可查看public生成檔
+# 改寫相對URL，使其路徑從根開始
+# 例如:/posts/first中含有/about/的連結，會改成從first到根再到about的路徑(/../../about)
+# https://discourse.gohugo.io/t/static-pages-dont-pick-up-styling/19652/2
+relativeURLs = true 
+
+hasCJKLanguage = true # 正確識別中、日、韓文
+
+PygmentsCodeFences = true
+PygmentsStyle = "monokai"
+
+paginate     = 10
+rssLimit  = 5  # Maximum number of items in the RSS feed.
+
+buildDrafts  = false # 生成時包含草稿
+buildFuture  = false # 生成時包含未來內容
+buildExpired = false # 生成時包含過期內容
+enableRobotsTXT = true    # 產生robot.txt (SEO優化用，使搜尋引擎不搜索無用網站內容)
+enableGitInfo   = false   # 取得git訊息
+enableEmoji     = true    # 支援表情符號
+enableMissingTranslationPlaceholders = false
+disableHugoGeneratorInject = false # 首頁有Hugo標示
+canonifyURLs = true  # 相對URL會轉成絕對URL
+
+# 禁用某類型頁面
+disableRSS     = false
+disableSitemap = false
+disable404     = false
+
+# 外部應用
+googleAnalytics = "G-CP7YJNBRWT"
+disqusShortname = "chunmolee"
+
+# 找查時對應資料夾
+archetypeDir = "archetypes"
+contentDir   = "content"
+dataDir      = "data"
+layoutDir    = "layouts"
+publishDir   = "public"
+
+[permalinks] # 文章網址格式
+  posts = "/posts/:year/:month/:title/"
+
+[author] # 正下方作者欄
+  name = "ChunMo Lee"
+
+[blackfriday] # markdown渲染器
+  hrefTargetBlank = true # 對外連結是否新開視窗
+
+[taxonomies] # 分類
+  category = "categories"
+  tag      = "tags"
+  # series   = "series"
+
+
+
+
+
+# 自訂變數
+[params]
+  dateform        = "Jan 2, 2006"
+  dateformShort   = "Jan 2"
+  dateformNum     = "2006/01/02"
+  dateformNumTime = "2006/01/02 15:04"
+
+  # Subtitle for home
+  homeSubtitle = "Travel | C.S. | Music"
+
+  # Set disableReadOtherPosts to true in order to hide the links to other posts.
+  disableReadOtherPosts = false
+
+  # There are a lot of buttons preconfigured. If you want to change them,
+  # generate the buttons here: https://sharingbuttons.io
+  # and add them into your own `layouts/partials/sharing-buttons.html`
+  # Enable sharing buttons, if you like
+  enableSharingButtons = true
+
+  # Integrate Javascript files or stylesheets by adding the url to the external assets or by
+  # linking local files with their path relative to the static folder, e.g. "css/styles.css"
+  customCSS = []
+  customJS  = []
+
+  # Toggle this option need to rebuild SCSS, requires extended version of Hugo
+  # Set "text-align: justify" to .post-content.
+  justifyContent = false  
+
+  # Metadata mostly used in document's head
+  description = "Andy's blog"
+  keywords = "homepage, blog"
+  # images = [""]
+  
+  # Set a background for the homepage
+  # backgroundImage = "assets/images/background.jpg"
+
+  
+  # Custom footer 
+  # If you want, you can easily override the default footer with your own content. 
+  footerLeft = "Powered by <a href=\"http://gohugo.io\">Hugo</a>"
+  footerRight = "Created with <a href=\"https://github.com/rhazdon/hugo-theme-hello-friend-ng\">hello-friend-ng</a>"
+
+  # Colors for favicons
+  [params.favicon.color]
+    mask = "#1b1c1d"
+    msapplication = "#1b1c1d"
+    theme = "#1b1c1d"
+
+  [params.logo] # 左上logo設定
+    logoMark     = ">"          # 左上logo前方符號
+    logoText     = "$ cd /home/"  # 左上logo文字
+    logoHomeLink = "/"          # 左上logo連結
+    # Set true to remove the logo cursor entirely. (刪logo)
+    # logoCursorDisabled = false
+    # Set to a valid CSS color to change the cursor in the logo. (改光標顏色)
+    logoCursorColor    = "#696969"
+    # Set to a valid CSS time value to change the animation duration, "0s" to disable. (光標閃爍速度)
+    logoCursorAnimate  = "1s"
+
+  # Commento 留言系統
+  # [params.commento]
+  #   url = ""
+
+  # Uncomment this if you want a portrait on your start page (首頁頭像)
+  # [params.portrait]
+  #   path     = "/img/image.jpg"
+  #   alt      = "Portrait"
+  #   maxWidth = "50px"
+
+  # Social icons
+  [[params.social]]
+    name = "email"
+    url  = "chunmo.lee@outlook.com"
+
+  [[params.social]]
+    name = "github"
+    url  = "https://github.com/chunmolee"
+
+
+# [languages]
+  # [languages.en]
+    # title = ""
+    # subtitle = ""
+    # keywords = ""
+    # weight    = 1
+    # copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    # readOtherPosts = "Read other posts"
+
+    # [languages.en.params.logo]
+    #   logoText = "cd /home/"
+    #   logoHomeLink = "/"
+    # or
+    #
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
+  # [languages.zh-tw]
+  #   subtitle  = ""
+  #   weight    = 2
+  #   copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+  
+  # And you can even create generic menu
+  [[menu.main]]
+    identifier = "about"
+    name       = "About"
+    url        = "/about"
+    weight = 1
+  [[menu.main]]
+    identifier = "posts"
+    name       = "Post"
+    url        = "/posts"
+    weight = 2
+  [[menu.main]]
+    identifier = "categories"
+    name       = "Category"
+    url        = "/categories"
+    weight = 3
+  [[menu.main]]
+    identifier = "tags"
+    name       = "Tag"
+    url        = "/tags"
+    weight = 4
