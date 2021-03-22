@@ -1,5 +1,5 @@
 # 基本變數
-baseurl      = "https://chunmolee.github.io"  # 網址
+baseURL      = "https://chunmolee.github.io"  # 網址
 title        = "Andy's Blog"
 theme        = "hello-friend-ng"
 languageCode = "zh-TW"  # html之lang屬性
@@ -43,7 +43,7 @@ disqusShortname = "chunmolee"
 
 # 找查時對應資料夾
 archetypeDir = "archetypes"
-contentDir   = "content"
+# contentDir   = "content" # 已改成中文
 dataDir      = "data"
 layoutDir    = "layouts"
 publishDir   = "public"
@@ -62,7 +62,31 @@ publishDir   = "public"
   tag      = "tags"
   # series   = "series"
 
+[languages]
+  [languages.zh-tw]
+    # baseurl      = "https://chunmolee.github.io.tw"
+    subtitle  = "Andy的部落格"
+    weight    = 1
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "其他文章"
+    contentDir = "content/Chinese_TW"
 
+  [languages.en]
+    # baseurl      = "https://chunmolee.github.io.en"
+    # title = ""
+    subtitle = "Andy's Blog"
+    # keywords = ""
+    weight    = 2
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Read other posts"
+    contentDir = "content/English"
+
+    # [languages.en.params.logo]
+      # logoText = "cd /home/"
+      # logoHomeLink = "/"
+    # or
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
 
 
 
@@ -145,27 +169,7 @@ publishDir   = "public"
     url  = "https://github.com/chunmolee"
 
 
-# [languages]
-  # [languages.en]
-    # title = ""
-    # subtitle = ""
-    # keywords = ""
-    # weight    = 1
-    # copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-    # readOtherPosts = "Read other posts"
 
-    # [languages.en.params.logo]
-    #   logoText = "cd /home/"
-    #   logoHomeLink = "/"
-    # or
-    #
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
-  # [languages.zh-tw]
-  #   subtitle  = ""
-  #   weight    = 2
-  #   copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-  
   # And you can even create generic menu
   [[menu.main]]
     identifier = "about"
