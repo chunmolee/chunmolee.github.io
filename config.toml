@@ -62,31 +62,7 @@ publishDir   = "public"
   tag      = "tags"
   # series   = "series"
 
-[languages]
-  [languages.zh-tw]
-    # baseurl      = "https://chunmolee.github.io.tw"
-    subtitle  = "Andy的部落格"
-    weight    = 1
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-    readOtherPosts = "其他文章"
-    contentDir = "content/Chinese_TW"
 
-  [languages.en]
-    # baseurl      = "https://chunmolee.github.io.en"
-    # title = ""
-    subtitle = "Andy's Blog"
-    # keywords = ""
-    weight    = 2
-    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
-    readOtherPosts = "Read other posts"
-    contentDir = "content/English"
-
-    # [languages.en.params.logo]
-      # logoText = "cd /home/"
-      # logoHomeLink = "/"
-    # or
-    # path = "/img/your-example-logo.svg"
-    # alt = "Your example logo alt text"
 
 
 
@@ -170,24 +146,83 @@ publishDir   = "public"
 
 
 
-  # And you can even create generic menu
-  [[menu.main]]
-    identifier = "about"
-    name       = "About"
-    url        = "/about"
-    weight = 1
-  [[menu.main]]
-    identifier = "posts"
-    name       = "Post"
-    url        = "/posts"
-    weight = 2
-  [[menu.main]]
-    identifier = "categories"
-    name       = "Category"
-    url        = "/categories"
-    weight = 3
-  [[menu.main]]
-    identifier = "tags"
-    name       = "Tag"
-    url        = "/tags"
-    weight = 4
+  
+
+# 多語言
+[languages]
+  [languages.zh-tw]
+    # baseurl      = "https://chunmolee.github.io.tw"
+    subtitle  = "Andy的部落格"
+    weight    = 1
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "其他文章"
+    contentDir = "content/Chinese_TW"
+    
+    # 菜單
+    [languages.zh-tw.menu]
+
+      [[languages.zh-tw.menu.main]]
+        url        = "/about"
+        identifier = "about"
+        name       = "關於我"
+        weight     = 1
+      [[languages.zh-tw.menu.main]]
+        url        = "/posts"
+        identifier = "posts"
+        name       = "文章"
+        weight     = 2
+      [[languages.zh-tw.menu.main]]
+        url        = "/categories"
+        identifier = "categories"
+        name       = "分類"
+        weight     = 3
+      [[languages.zh-tw.menu.main]]
+        url        = "/tags"
+        identifier = "tags"
+        name       = "標籤"
+        weight     = 4
+
+
+
+
+  [languages.en]
+    # baseurl      = "https://chunmolee.github.io.en"
+    # title = ""
+    subtitle = "Andy's Blog"
+    # keywords = ""
+    weight    = 2
+    copyright = '<a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>'
+    readOtherPosts = "Read other posts"
+    contentDir = "content/English"
+
+    # menu
+    [languages.en.menu]
+
+      [[languages.en.menu.main]]
+        url        = "/about"
+        identifier = "about"
+        name       = "About"
+        weight     = 1
+      [[languages.en.menu.main]]
+        url        = "/posts"
+        identifier = "posts"
+        name       = "Post"
+        weight     = 2
+      [[languages.en.menu.main]]
+        url        = "/categories"
+        identifier = "categories"
+        name       = "Category"
+        weight     = 3
+      [[languages.en.menu.main]]
+        url        = "/tags"
+        identifier = "tags"
+        name       = "Tag"
+        weight     = 4
+
+
+    # [languages.en.params.logo]
+      # logoText = "cd /home/"
+      # logoHomeLink = "/"
+    # or
+    # path = "/img/your-example-logo.svg"
+    # alt = "Your example logo alt text"
