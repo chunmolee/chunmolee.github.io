@@ -1,0 +1,14 @@
+<nav class="menu">
+    <ul class="menu__inner">
+        {{- $currentPage := . -}}
+        {{ range .Site.Menus.main -}}
+            <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
+        {{- end }}
+        {{ if .IsTranslated }} 
+            {{ range .Translations }}
+                | &nbsp; {{ .Language.LanguageName }} &nbsp;
+                <a href="{{ .Permalink }}"><span class="flag flag-icon flag-icon-{{ index $.Site.Data.langFlags (.Lang) }} flag-icon-squared"></span></a>                        
+            {{ end }}
+        {{ end }}
+    </ul>
+</nav>
