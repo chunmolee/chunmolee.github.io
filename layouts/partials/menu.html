@@ -5,9 +5,8 @@
             <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
         {{- end }}
         {{ if .IsTranslated }} 
-            {{ range .Translations }}
-                | &nbsp; {{ .Language.LanguageName }} &nbsp;
-                <a href="{{ .Permalink }}"><span class="flag flag-icon flag-icon-{{ index $.Site.Data.langFlags (.Lang) }} flag-icon-squared"></span></a>                        
+            {{ range .Translations }}                
+                | &nbsp; <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</span></a>                        
             {{ end }}
         {{ end }}
     </ul>
