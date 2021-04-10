@@ -1,7 +1,7 @@
 {{ define "main" }}
     <main class="post">
 
-        <!--<div class="post-info">
+        <!-- <div class="post-info">
             {{ if .IsTranslated }}
                 {{ i18n "postAvailable" }}
                 {{ range .Translations }}
@@ -9,7 +9,7 @@
                 {{ end}}
             {{ end }}
             </p>
-        </div>-->
+        </div> -->
 
         <article>
             <h2 class="post-title"><a href="{{ .Permalink }}">{{ .Title | markdownify }}</a></h2>
@@ -41,7 +41,7 @@
         <hr />
 
         <div class="post-info">
-            {{ partial "tags.html" . }}
+            {{ partial "tags.html" .Params.tags }}
             {{ partial "categories.html" . }}
 
             {{- if .GitInfo }}
