@@ -4,10 +4,10 @@
         {{ range .Site.Menus.main -}}
             <li><a href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
         {{- end }}
-        {{ if .IsTranslated }} 
+        <!-- {{ if .IsTranslated }} 
             {{ range .Translations }}                
                 | &nbsp; <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</span></a>                        
             {{ end }}
-        {{ end }}
+        {{ end }} -->
     </ul>
 </nav>
