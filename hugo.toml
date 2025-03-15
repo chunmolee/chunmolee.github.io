@@ -1,0 +1,229 @@
+baseURL = "https://chunmolee.github.io/"  # 網站網址
+title = "Yakult's Blog"  # 網站標題
+pagerSize = 5  # 每頁顯示的文章數量
+theme = "PaperMod"  # 主題名稱
+copyright = ""
+
+defaultContentLanguage = "zh-tw"  # 預設語言為繁體中文
+defaultContentLanguageInSubdir = true  # 預設語言的內容放於子目錄
+
+enableInlineShortcodes = true  # 啟用內嵌短碼
+enableRobotsTXT = true  # 啟用 robots.txt(搜尋引擎爬蟲檔案)
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+enableEmoji = true  # 啟用 Emoji 支援
+pygmentsUseClasses = true  # 使用 CSS 類別來樣式化程式碼區塊
+
+[minify]
+disableXML = true
+minifyOutput = true
+
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+[params]
+env = "production"
+title = "Yakult's Blog"
+description = "Yakult's  Blog - https://chunmolee.github.io/"
+author = "C.M. Lee"
+# author = ["Me", "You"] # multiple authors
+# images = [ "" ]
+DateFormat = "2006-01-02"
+keywords = ["Blog", "Portfolio", "PaperMod"]
+
+defaultTheme = "auto"  # 設定深色或淺色主題，auto 為自動偵測 (auto, light, dark)
+disableThemeToggle = false  # 關閉主題切換按鈕
+
+ShowReadingTime = true  # 於文章頂部顯示閱讀時間
+ShowShareButtons = true  # 於文章底部顯示分享按鈕
+ShowPostNavLinks = true  # 於文章底部顯示上一篇、下一篇文章連結
+ShowBreadCrumbs = true  # 於文章顯示麵包屑導航
+ShowCodeCopyButtons = true  # 於程式碼區塊顯示複製按鈕
+ShowWordCount = true  # 於文章頂部顯示字數
+ShowRssButtonInSectionTermList = true  # 於分類、標籤頁面顯示 RSS 按鈕
+UseHugoToc = true  # 使用 Hugo 內建的目錄功能
+disableSpecial1stPost = false  # 關閉首篇文章特別樣式
+disableScrollToTop = false  # 關閉滾動到頂部按鈕
+displayFullLangName = true # 顯示完整語言名稱
+comments = true  # 啟用文章留言功能
+hidemeta = false  # 隱藏文章的元資料(作者、日期、分類、標籤)
+hideSummary = false  # 隱藏文章摘要
+showtoc = true  # 顯示文章目錄
+tocopen = false  # 預設展開文章目錄
+
+  [params.assets]
+  disableHLJS = false  # 禁用 Highlight.js
+  # disableFingerprinting = true
+  favicon = "/yakult_icon.ico"
+  # favicon16x16 = "favicon-16x16.png"
+  # favicon32x32 = "favicon-32x32.png"
+  # apple_touch_icon = "apple-touch-icon.png"
+  # safari_pinned_tab = "safari-pinned-tab.svg"
+
+  [params.label]
+  text = "Yakult's Blog"
+  # icon = ""
+  # iconHeight = 35
+
+  [params.profileMode]
+  enabled = false
+  title = "Hi, I'm Yakult 👋"
+  subtitle = """
+  过去の自分が今仆の土台となる"""
+  imageUrl = "https://cdn.pixabay.com/photo/2023/06/17/16/22/man-8070372_1280.jpg"
+  imageWidth = 120
+  imageHeight = 120
+  imageTitle = "Yakult"
+
+  [params.homeInfoParams]
+  Title = "Hi, I'm Yakult 👋"
+  Content = """
+  过去の自分が今仆の土台となる"""
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/chunmolee"
+
+  [[params.socialIcons]]
+  name = "Rss"
+  url = "index.xml"
+
+  [params.analytics]
+  [params.analytics.googleAnalytics]
+  SiteVerificationTag = ""
+
+  [params.cover]
+  hidden = false  # 隱藏封面圖片
+  hiddenInList = false  # 於文章列表頁面隱藏封面圖片
+  hiddenInSingle = false  # 於文章頁面隱藏封面圖片
+  linkFullImages = true # 點擊封面圖片時開啟原圖
+
+  [params.editPost]
+  URL = "https://github.com/chunmolee/chunmolee.github.io" # Change this to your repository
+  Text = "Suggest Changes"
+  appendFilePath = true
+
+  [params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1000
+  threshold = 0.4
+  minMatchCharLength = 0
+  limit = 10
+  keys = ["title", "permalink", "summary", "content"]
+
+[markup]
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+noClasses = false
+# anchorLineNos = true
+# codeFences = true
+# guessSyntax = true
+# lineNos = true
+# style = monokai
+
+[privacy]
+[privacy.vimeo]
+disabled = false
+simple = true
+
+[privacy.x]
+disabled = false
+enableDNT = true
+simple = true
+
+[privacy.instagram]
+disabled = false
+simple = true
+
+[privacy.youtube]
+disabled = false
+privacyEnhanced = true
+
+[services]
+[services.instagram]
+disableInlineCSS = true
+
+[services.x]
+disableInlineCSS = true
+
+[services.disqus]
+shortname = "chunmolee"
+
+[services.googleAnalytics]
+id = "G-CP7YJNBRWT"
+
+[languages]
+  [languages.zh-tw]
+  contentDir = "content/zh_tw" # 內容目錄
+  disabled = false
+  languageCode = "zh-tw" # 語言代碼(參考 RFC 5646)
+  languageDirection = "ltr" # 語言閱讀方向
+  languageName = "繁體中文" # 語言顯示名稱
+  weight = 1
+
+  [languages.zh-tw.taxonomies]
+  category = "分類"
+  tag = "標籤"
+  series = "系列專欄"
+
+  [languages.zh-tw.permalinks]
+  [languages.zh-tw.permalinks.taxonomy]
+  "分類" = "/categories"
+  "標籤" = "/tags"
+  "系列專欄" = "/series"
+
+  [languages.zh-tw.permalinks.term]
+  "分類" = "/categories/:slug"
+  "標籤" = "/tags/:slug"
+  "系列專欄" = "/series/:slug"
+
+  [languages.zh-tw.menu]
+    [[languages.zh-tw.menu.main]]
+    name = "文章"
+    url = "archives/"
+    weight = 5
+
+    [[languages.zh-tw.menu.main]]
+    name = "分類"
+    pageRef = "分類"
+    weight = 10
+
+    [[languages.zh-tw.menu.main]]
+    name = "系列專欄"
+    pageRef = "系列專欄"
+    weight = 15
+
+    [[languages.zh-tw.menu.main]]
+    name = "標籤"
+    pageRef = "標籤"
+    weight = 20
+
+    [[languages.zh-tw.menu.main]]
+    name = "搜尋"
+    url = "search"
+    weight = 25
+
+  [languages.zh-tw.params]
+    [languages.zh-tw.params.profileMode]
+    enabled = true
+    title = "Hi, I'm Yakult 👋"
+    subtitle = """
+    过去の自分が今仆の土台となる"""
+    imageUrl = "https://cdn.pixabay.com/photo/2023/06/17/16/22/man-8070372_1280.jpg"
+    imageTitle = "My image"
+
+      [[languages.zh-tw.params.profileMode.buttons]]
+      name = "關於我"
+      url = "about"
+
+      [[languages.zh-tw.params.profileMode.buttons]]
+      name = "部落格"
+      url = "notes"
+
+
