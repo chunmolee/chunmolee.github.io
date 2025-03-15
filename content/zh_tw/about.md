@@ -16,7 +16,7 @@ ShowPostNavLinks: false
 ShowWordCount: false
 ShowRssButtonInSectionTermList: false
 cover:
-  image: "images/DSCF4226.JPG"
+  image: "images/cover/DSCF4226.JPG"
   hiddenInList: true
   alt: ""
   caption: "2024年 3月 攝於 北海道小樽運河"

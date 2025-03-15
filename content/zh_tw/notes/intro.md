@@ -11,7 +11,7 @@ draft: false
 showToc: true
 # canonicalURL: "https://canonical.url/to/page"
 cover:
-    image: "images/DSCF3799.JPG" # image path/url
+    image: "images/cover/DSCF3799.JPG" # image path/url
     alt: "太平雲梯"
     caption: "2023年 11月 攝於 嘉義縣太平雲梯" # display caption under cover
     relative: true # when using page bundles set this to true
